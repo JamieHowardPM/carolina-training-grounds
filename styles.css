@@ -1,8 +1,8 @@
 /* Color palette (UNC inspired)
-   Navy: #13294B
-   Carolina Blue: #4B9CD3
-   Lighter Blue: #7BAFD4
-   Very light blue: #E5F3FB
+   Light Carolina Blue (base): #E5F3FB
+   Carolina Blue: #7BAFD4
+   Mid Blue: #4B9CD3
+   Navy (accent): #13294B
 */
 
 *,
@@ -19,7 +19,10 @@ html {
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background-color: #0f172a;
+  background:
+    radial-gradient(circle at top left, rgba(123, 175, 212, 0.25) 0, transparent 55%),
+    radial-gradient(circle at bottom right, rgba(229, 243, 251, 0.9) 0, transparent 55%),
+    #e5f3fb;
   color: #0f172a;
   line-height: 1.6;
 }
@@ -33,17 +36,17 @@ body {
 }
 
 .section {
-  padding: 3.4rem 0;
+  padding: 3.2rem 0;
 }
 
-/* Sections with stronger color blocks */
+/* Sections with color emphasis */
 .section-light {
-  background: linear-gradient(to bottom, #f3f4f6 0, #e5f3fb 60%, #f9fafb 100%);
+  background: #ffffff;
 }
 
 .section-blue {
-  background: linear-gradient(135deg, #4b9cd3, #13294b);
-  color: #f9fbff;
+  background: linear-gradient(to bottom, #e5f3fb 0, #d3e9f9 40%, #e5f3fb 100%);
+  color: #0f172a;
 }
 
 .section-navy {
@@ -106,9 +109,9 @@ body {
 
 /* Hero */
 .hero {
-  background: radial-gradient(circle at top left, #4b9cd3 0, #13294b 55%);
-  color: #f9fbff;
-  padding: 3.8rem 0 3.4rem;
+  background: linear-gradient(135deg, #e5f3fb, #c9e5f7);
+  color: #13294b;
+  padding: 3.5rem 0 3.2rem;
 }
 
 .hero-grid {
@@ -126,7 +129,7 @@ body {
 
 .hero-text p {
   font-size: 0.98rem;
-  color: #e0ecff;
+  color: #1f2937;
   margin-bottom: 0.9rem;
 }
 
@@ -139,7 +142,7 @@ body {
 
 .hero-note {
   font-size: 0.9rem;
-  color: #cbd5f5;
+  color: #4b5563;
 }
 
 /* Hero image panel */
@@ -152,15 +155,14 @@ body {
   background-size: cover;
   background-position: center;
   box-shadow:
-    0 26px 60px rgba(15, 23, 42, 0.55),
-    0 0 0 8px rgba(15, 23, 42, 0.45);
+    0 20px 45px rgba(15, 23, 42, 0.35),
+    0 0 0 6px rgba(229, 243, 251, 0.95);
 }
 
 .hero-media-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top, rgba(19, 41, 75, 0.05), transparent 50%),
-              linear-gradient(to bottom right, rgba(19, 41, 75, 0.45), rgba(0, 0, 0, 0.5));
+  background: linear-gradient(to bottom right, rgba(19, 41, 75, 0.35), rgba(0, 0, 0, 0.25));
 }
 
 /* Buttons */
@@ -179,25 +181,25 @@ body {
 }
 
 .btn-primary {
-  background-color: #ffffff;
-  color: #13294b;
-  border-color: #ffffff;
+  background-color: #13294b;
+  color: #ffffff;
+  border-color: #13294b;
 }
 
 .btn-primary:hover {
-  background-color: #e0f2ff;
-  border-color: #e0f2ff;
+  background-color: #0b182f;
+  border-color: #0b182f;
   transform: translateY(-1px);
 }
 
 .btn-outline {
   background-color: transparent;
-  color: #ffffff;
-  border-color: #cbe4ff;
+  color: #13294b;
+  border-color: #7bafd4;
 }
 
 .btn-outline:hover {
-  background-color: rgba(15, 23, 42, 0.2);
+  background-color: #e5f3fb;
 }
 
 /* Text links */
@@ -286,7 +288,7 @@ body {
 .facility-image-wrap {
   border-radius: 1.2rem;
   overflow: hidden;
-  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.35);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.25);
 }
 
 .facility-image {
@@ -300,21 +302,26 @@ body {
 .card {
   border-radius: 1.1rem;
   padding: 1.5rem 1.4rem;
-  border: 1px solid rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(15, 23, 42, 0.06);
   background-color: #ffffff;
-  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
 }
 
-.section-blue .card,
 .section-navy .card {
-  background: rgba(15, 23, 42, 0.45);
-  border-color: rgba(148, 163, 184, 0.35);
+  background-color: rgba(15, 23, 42, 0.7);
+  border-color: rgba(148, 163, 184, 0.4);
   box-shadow: 0 18px 40px rgba(15, 23, 42, 0.5);
+}
+
+.section-blue .card {
+  background-color: #ffffff;
+  border-color: rgba(148, 163, 184, 0.35);
 }
 
 .card h3 {
   font-size: 1.2rem;
   margin-bottom: 0.45rem;
+  color: inherit;
 }
 
 .card p {
@@ -339,15 +346,19 @@ body {
   color: #1d4ed8;
 }
 
-.section-blue .program-tag,
+.section-blue .program-tag {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+
 .section-navy .program-tag {
-  background-color: rgba(219, 234, 254, 0.14);
+  background-color: rgba(219, 234, 254, 0.16);
   color: #e0f2ff;
 }
 
 .program-tag-light {
-  background-color: rgba(148, 163, 184, 0.3);
-  color: #e5e7eb;
+  background-color: rgba(148, 163, 184, 0.26);
+  color: #f3f4f6;
 }
 
 /* Lists */
@@ -363,6 +374,11 @@ body {
   margin-top: 0.25rem;
 }
 
+.section-blue .bullet-list {
+  color: #374151;
+}
+
+.section-navy .bullet-list,
 .bullet-light {
   color: #e5ecff;
 }
@@ -372,7 +388,10 @@ body {
   color: #6b7280;
 }
 
-.section-blue .small,
+.section-blue .small {
+  color: #4b5563;
+}
+
 .section-navy .small {
   color: #d1ddff;
 }
@@ -385,8 +404,8 @@ body {
 
 /* Footer */
 .site-footer {
-  background-color: #050816;
-  border-top: 1px solid rgba(30, 64, 175, 0.6);
+  background-color: #0b1825;
+  border-top: 1px solid rgba(19, 41, 75, 0.7);
   padding: 1.2rem 0;
 }
 
