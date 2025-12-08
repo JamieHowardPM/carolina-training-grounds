@@ -1,32 +1,87 @@
-<!-- CTG Make a Payment section -->
-<section id="payments" style="text-align: center; padding: 3rem 1rem; background: #f5f7fb;">
-  <h2 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 1.8rem; margin-bottom: 0.5rem; color: #13294B;">
-    Make a Payment to Carolina Training Grounds
-  </h2>
-  <p style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #4b5563; max-width: 520px; margin: 0 auto 1.5rem;">
-    Use this secure payment link to pay for studio rentals, lessons, workshops, or other training services at Carolina Training Grounds.
-  </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payments | Carolina Training Grounds</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Secure payment page for Carolina Training Grounds training space rentals, seminars, and programs.">
+  <link rel="stylesheet" href="styles.css">
+</head>
 
-  <a href="https://square.link/u/aU0fCBtu?src=embed"
-     target="_blank"
-     rel="noopener"
-     style="
-       display: inline-block;
-       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-       font-size: 1rem;
-       line-height: 1;
-       padding: 0.9rem 1.8rem;
-       color: #ffffff;
-       background-color: #13294B;
-       border-radius: 999px;
-       text-decoration: none;
-       font-weight: 600;
-       box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
-     ">
-    Make a Payment
-  </a>
+<body>
 
-  <p style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 0.85rem; color: #6b7280; margin-top: 0.75rem;">
-    Payments are processed securely by Square. Carolina Training Grounds does not store your card information.
-  </p>
-</section>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container nav-bar">
+      <div class="logo-wrap">
+        <img src="CTG Logo.png" alt="CTG logo" class="ctg-logo">
+        <span class="site-name">Carolina Training Grounds</span>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html#about">About</a>
+        <a href="index.html#facility">Facility</a>
+        <a href="index.html#gallery">Gallery</a>
+        <a href="index.html#host">Programs & Events</a>
+        <a href="payments.html">Payments</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- INTRO BAR -->
+  <section class="intro-bar">
+    <div class="container intro-text">
+      Secure Payment Portal for Carolina Training Grounds
+    </div>
+  </section>
+
+  <main>
+
+    <!-- PAYMENT SECTION -->
+    <section class="section section-white">
+      <div class="container narrow">
+        <h2 class="section-title">Make a Payment</h2>
+        <p class="section-desc">
+          Use this page to make payments for space rentals, seminars, programs, or other agreed services at Carolina Training Grounds.
+        </p>
+
+        <div class="card-grid one">
+          <div class="card">
+            <h3>Flexible Payment Link</h3>
+            <p>
+              This secure Square link allows you to enter any payment amount.  
+              Use this for:
+            </p>
+            <ul>
+              <li>Training space rentals</li>
+              <li>Event or seminar registration</li>
+              <li>Instructor program fees</li>
+              <li>Any agreed payment amount</li>
+            </ul>
+
+            <a href="https://square.link/u/SAMPLE" target="_blank" class="btn-primary">
+              Make a Payment
+            </a>
+
+            <p class="small" style="margin-top: 12px;">
+              You will receive an emailed receipt after submitting your payment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      © <span id="year"></span> Carolina Training Grounds. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
