@@ -177,6 +177,20 @@ body {
 .btn-primary:hover {
   background-color: var(--blue);
 }
+.btn-secondary {
+  display: inline-block;
+  background-color: var(--blue);
+  color: var(--white);
+  padding: 12px 22px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 12px;
+}
+
+.btn-secondary:hover {
+  background-color: var(--navy);
+}
 
 /* =========================================================
    FOOTER
