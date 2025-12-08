@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Liability Waiver | Carolina Training Grounds</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container nav-bar">
+      <div class="logo-wrap">
+        <img src="CTG Logo.png" class="ctg-logo" alt="CTG logo">
+        <span class="site-name">Carolina Training Grounds</span>
+      </div>
+
+      <nav class="main-nav">
+        <a href="index.html#about">About</a>
+        <a href="index.html#facility">Facility</a>
+        <a href="index.html#gallery">Gallery</a>
+        <a href="index.html#host">Programs & Events</a>
+        <a href="payments.html">Payments</a>
+        <a href="waiver.html">Waiver</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- INTRO BAR -->
+  <section class="intro-bar">
+    <div class="container intro-text">
+      Liability Waiver & Participant Agreement
+    </div>
+  </section>
+
+  <main>
+
+    <!-- WAIVER CONTENT -->
+    <section class="section section-white">
+      <div class="container narrow">
+
+        <h2 class="section-title">Participant Waiver</h2>
+        <p class="section-desc">
+          All participants must complete this waiver before training, attending a class, or using the facility.
+        </p>
+
+        <div class="card">
+          <h3>Release of Liability</h3>
+          <p>
+            By signing below, I acknowledge that training at Carolina Training Grounds may involve physical activity, 
+            including striking, partner drills, pad work, conditioning, and other movement-based exercises. 
+            I understand that participating in physical training carries inherent risks of injury.
+          </p>
+
+          <p>
+            I voluntarily assume all risks associated with participation and agree to release and hold harmless 
+            Carolina Training Grounds LLC, its owners, instructors, staff, and affiliates from any liability, 
+            claims, or demands arising from participation or presence at the facility.
+          </p>
+
+          <h3>Medical & Safety Agreement</h3>
+          <p>
+            I certify that I am physically capable of participating, will communicate any injuries or limitations 
+            to staff, and will follow all safety guidelines to reduce risk to myself and others.
+          </p>
+
+          <h3>Electronic Signature Consent</h3>
+          <p>
+            By submitting this form, I acknowledge that my typed name constitutes a legally binding signature and 
+            agreement to the terms above.
+          </p>
+        </div>
+
+        <!-- GOOGLE FORM EMBED GOES HERE -->
+        <div class="card" style="margin-top: 30px;">
+          <h3>Complete the Waiver</h3>
+          <p>Please fill out the form below to complete your waiver.</p>
+
+          <!-- Replace with your real Google Form embed -->
+          <iframe 
+            src="YOUR_GOOGLE_FORM_EMBED_URL"
+            width="100%" 
+            height="800" 
+            frameborder="0" 
+            marginheight="0" 
+            marginwidth="0"
+            loading="lazy"
+          >
+          Loading…
+          </iframe>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      © <span id="year"></span> Carolina Training Grounds. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
