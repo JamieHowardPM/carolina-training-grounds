@@ -1,246 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- ===== Basic Page Setup ===== -->
   <meta charset="UTF-8">
   <title>Carolina Training Grounds | Chapel Hill Training Facility</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Carolina Training Grounds is a dedicated training facility in Chapel Hill, North Carolina, built for self defense, fitness, and small group instruction.">
+  <meta name="description" content="Carolina Training Grounds is a flexible training facility in Chapel Hill, North Carolina. Host classes, seminars, workshops, and private training sessions in a clean, well-equipped space.">
+
+  <!-- ===== Stylesheet Link ===== -->
+  <!-- Update styles in styles.css; keep class and ID names consistent where possible -->
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
-  <!-- HEADER -->
+  <!-- =========================================================
+       SITE HEADER + NAVIGATION
+       - Edit the logo text or replace with an <img> tag as needed
+       ========================================================= -->
   <header class="site-header">
     <div class="container nav-bar">
       <div class="logo">
+        <!-- If you add a logo file, replace the span below with:
+             <img src="images/ctg-logo.png" alt="Carolina Training Grounds logo"> -->
         <span class="logo-main">Carolina Training Grounds</span>
-        <span class="logo-sub">Chapel Hill Training Facility</span>
+        <span class="logo-sub">Chapel Hill, North Carolina</span>
       </div>
+
       <nav class="main-nav">
+        <!-- Update section IDs below if you rename them -->
         <a href="#hero">Home</a>
+        <a href="#about">About</a>
         <a href="#facility">Facility</a>
-        <a href="#programs">Who Trains Here</a>
-        <a href="#host">Host Your Training</a>
+        <a href="#host">Host Your Event</a>
+        <a href="#payments">Payments</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
   <main>
-
-    <!-- HERO -->
+    <!-- =========================================================
+         HERO SECTION
+         - First impression for visitors
+         - Update headline, subtext, and primary buttons here
+         ========================================================= -->
     <section id="hero" class="hero">
       <div class="container hero-grid">
         <div class="hero-text">
-          <h1>Train In A Focused Space, Not A Crowded Gym</h1>
+          <h1>Train. Teach. Host. All In One Space.</h1>
           <p>
-            Carolina Training Grounds is a dedicated training facility in Chapel Hill for self defense, striking, and small group fitness.
-            It is built for coaches and programs that need a clean, dependable space to train.
+            Carolina Training Grounds is a flexible training facility in Chapel Hill designed for fitness, martial arts, and community programs. Use the space for classes, workshops, seminars, or private training.
           </p>
 
           <div class="hero-actions">
-            <a href="https://www.kravmagachapelhillnc.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-              Train With Krav Maga Chapel Hill
-            </a>
-            <a href="#host" class="btn btn-outline">
-              Ask About Space Rental
-            </a>
-          </div>
+            <!-- Primary call to action: scroll to host section -->
+            <a href="#host" class="btn btn-primary">Host An Event Or Class</a>
 
-          <p class="hero-note">
-            Facility location is in Chapel Hill, North Carolina. Address, parking, and access details are provided after registration or rental confirmation.
-          </p>
+            <!-- Payment button: always points to payments.html -->
+            <!-- To change payment options, edit payments.html only -->
+            <a href="payments.html" class="btn btn-outline">Make A Payment</a>
+          </div>
         </div>
 
-        <!-- HERO IMAGE -->
-        <div class="hero-media">
-          <div class="hero-media-overlay"></div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- FACILITY -->
-    <section id="facility" class="section section-light">
-      <div class="container">
-        <div class="section-header">
-          <h2>The Facility</h2>
-          <p>
-            The space is set up for striking, pad work, and partner drills with clear sightlines and a calm, focused training environment.
-          </p>
-        </div>
-
-        <div class="grid facility-grid">
-
-          <!-- TEXT -->
-          <div class="facility-copy">
-            <div class="pill">Facility Snapshot</div>
-            <h3>Built Around The Training Floor</h3>
-            <p>
-              Carolina Training Grounds centers everything on the mats. It is designed so classes can move, strike, and drill without
-              fighting for space or working around general gym traffic.
-            </p>
-
-            <ul class="bullet-list">
-              <li>Open matted floor for striking and self defense drills</li>
-              <li>Space for small and mid sized groups</li>
-              <li>Room for pads, shields, and light training equipment</li>
-              <li>Layout that supports coaching, demos, and observation</li>
-            </ul>
-          </div>
-
-          <!-- UPDATED FACILITY IMAGE -->
-          <div class="facility-image-wrap">
-            <div class="facility-image"></div>
-          </div>
-
+        <!-- Optional hero image block; replace src with your own image path -->
+        <div class="hero-image">
+          <!-- Example placeholder; update or remove as needed
+          <img src="images/ctg-facility-hero.jpg" alt="Training at Carolina Training Grounds">
+          -->
         </div>
       </div>
     </section>
 
-    <!-- WHO TRAINS HERE -->
-    <section id="programs" class="section section-blue">
+    <!-- =========================================================
+         ABOUT SECTION
+         - High level description of what CTG is
+         - Keep this generic and facility-focused
+         ========================================================= -->
+    <section id="about" class="section">
       <div class="container">
-        <div class="section-header section-header-light">
-          <h2>Who Trains At Carolina Training Grounds</h2>
-          <p>
-            The facility is the home base for selected programs that manage their own memberships and curriculum while sharing the same training space.
-          </p>
-        </div>
-
-        <div class="grid programs-grid">
-
-          <!-- PRIMARY PROGRAM -->
-          <div class="card program-card">
-            <div class="program-tag">Primary Program</div>
-            <h3>Krav Maga Chapel Hill</h3>
-            <p>
-              Krav Maga Chapel Hill offers practical self defense and striking based conditioning for adults and teens.
-              Classes focus on real world skills, clear coaching, and a supportive training community.
-            </p>
-
-            <ul class="bullet-list">
-              <li>Foundations and Level 1+ Krav Maga</li>
-              <li>Krav Fit style conditioning sessions</li>
-              <li>Training designed for everyday people</li>
-            </ul>
-
-            <a href="https://www.kravmagachapelhillnc.com" target="_blank" rel="noopener noreferrer" class="btn-link-light">
-              Visit Krav Maga Chapel Hill
-            </a>
-          </div>
-
-          <!-- FUTURE PROGRAMS -->
-          <div class="card program-card">
-            <div class="program-tag program-tag-light">Future Partners</div>
-            <h3>Additional Programs And Events</h3>
-            <p>
-              The space can support select seminars, weekend workshops, and other small group training blocks as the schedule allows.
-            </p>
-            <p class="small">
-              New partners may be added over time. Availability is limited and based on the standing Krav Maga Chapel Hill class schedule.
-            </p>
-          </div>
-
-        </div>
+        <h2>About Carolina Training Grounds</h2>
+        <p>
+          Carolina Training Grounds is a dedicated space for group classes, small-group training, and events. The facility is designed to support striking arts, self defense, fitness programs, and community-focused workshops.
+        </p>
+        <p>
+          Our goal is to provide a clean, professional space that instructors and organizations can use without the overhead of managing a full-time gym. You bring the program. We provide the floor, equipment, and environment.
+        </p>
       </div>
     </section>
 
-    <!-- HOST YOUR TRAINING -->
-    <section id="host" class="section section-navy">
+    <!-- =========================================================
+         FACILITY SECTION
+         - Describe the physical space and what is available
+         - Update bullet points as equipment and layout change
+         ========================================================= -->
+    <section id="facility" class="section section-alt">
       <div class="container">
-        <div class="section-header section-header-light">
-          <h2>Host Your Training At Carolina Training Grounds</h2>
-          <p>
-            Limited rental blocks are available for instructors, teams, and organizations who need a focused space instead of a general gym floor.
-          </p>
-        </div>
-
-        <div class="grid host-grid">
-
-          <div class="card host-card">
-            <h3>Good Fit For</h3>
-            <ul class="bullet-light">
-              <li>Self defense and personal safety seminars</li>
-              <li>Small group striking or pad work sessions</li>
-              <li>Skills based workshops and clinics</li>
-              <li>Instructor training or curriculum labs</li>
-            </ul>
-          </div>
-
-          <div class="card host-card">
-            <h3>How Space Use Works</h3>
-            <ul class="bullet-light">
-              <li>Shared schedule with standing Krav Maga Chapel Hill classes</li>
-              <li>Rental blocks sized for realistic class times</li>
-              <li>Details on rates and expectations provided on inquiry</li>
-              <li>Facility is not a drop in open gym space</li>
-            </ul>
-          </div>
-
-        </div>
-
-        <p class="host-note small">
-          Rental and partnership conversations are handled directly by the facility. When you reach out, you will receive specific information about availability, logistics, and next steps.
+        <h2>The Facility</h2>
+        <p>
+          The space is built to support high-movement training and small to mid-sized groups. It is ideal for striking-based classes, self defense training, functional fitness, and skills workshops.
         </p>
 
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section section-light">
-      <div class="container">
-        <div class="section-header">
-          <h2>Contact Carolina Training Grounds</h2>
-          <p>
-            For facility questions, rental inquiries, partnerships, or general information, use the contact details below.
-            Class, membership, and training questions are managed directly by Krav Maga Chapel Hill.
-          </p>
-        </div>
-
-        <div class="grid contact-grid">
-
+        <div class="grid three-col">
           <div class="card">
-            <h3>Facility & Rental Inquiries</h3>
-            <ul class="contact-list">
-              <li><strong>Email:</strong> <a href="mailto:info@carolinatraininggrounds.com">info@carolinatraininggrounds.com</a></li>
-              <li><strong>Phone:</strong> <a href="tel:19193913013">919-391-3013</a></li>
+            <h3>Training Floor</h3>
+            <ul>
+              <li>Padded floor for striking and movement drills</li>
+              <li>Open layout for classes and seminars</li>
+              <li>Space for small-group work and stations</li>
             </ul>
-            <p class="small">
-              Availability is based on the existing training schedule. You will receive full details once we confirm the nature of your intended use.
-            </p>
           </div>
 
           <div class="card">
-            <h3>Training & Class Questions</h3>
-            <p>
-              All class information, membership options, schedules, and program details are handled directly by
-              Krav Maga Chapel Hill.
-            </p>
-            <a href="https://www.kravmagachapelhillnc.com" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
-              Visit Krav Maga Chapel Hill
-            </a>
+            <h3>Equipment</h3>
+            <ul>
+              <li>Striking pads and bags (as available)</li>
+              <li>Portable training gear for partner drills</li>
+              <li>Whiteboard or display area for instruction</li>
+            </ul>
           </div>
 
+          <div class="card">
+            <h3>Environment</h3>
+            <ul>
+              <li>Clean, focused training atmosphere</li>
+              <li>Restroom access for participants</li>
+              <li>Parking and easy access from Chapel Hill</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- =========================================================
+         HOST YOUR EVENT / SPACE RENTAL SECTION
+         - This is the anchor for #host (do not rename the ID)
+         - Payment button here links to payments.html
+         - Adjust descriptive text as your rental model changes
+         ========================================================= -->
+    <section id="host" class="section">
+      <div class="container">
+        <h2>Host Your Class, Seminar, Or Event</h2>
+        <p>
+          Use Carolina Training Grounds for one-time seminars, recurring classes, or private training blocks. The space can support fitness sessions, self defense workshops, instructor-led programs, and small-group events.
+        </p>
+
+        <div class="grid two-col">
+          <div class="card">
+            <h3>Ways To Use The Space</h3>
+            <ul>
+              <li>Weekly or monthly classes</li>
+              <li>Weekend or evening seminars</li>
+              <li>Special events, clinics, or intensives</li>
+              <li>Private or small-group training sessions</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>How Payments Work</h3>
+            <p>
+              For now, payments are handled through a general payment page. You can use it for space rental, event registration, or other agreed services.
+            </p>
+            <p class="small">
+              In the future, you can update <strong>payments.html</strong> to reflect specific programs, pricing, or event links without changing this page.
+            </p>
+
+            <!-- Reusable payment button -->
+            <!-- To change any Square or payment details, edit payments.html only -->
+            <a id="payments" href="payments.html" class="btn btn-primary">Make A Payment</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CONTACT SECTION
+         - Basic contact info only
+         - Update email/phone and any preferred contact method
+         ========================================================= -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>
+          For questions about space availability, hosting an event, or using the facility for your program, please reach out by email or phone.
+        </p>
+
+        <div class="grid two-col contact-grid">
+          <div class="card">
+            <h3>Facility Contact</h3>
+            <ul class="contact-list">
+              <!-- Update these as your official CTG contact details are finalized -->
+              <li><strong>Email:</strong> <a href="mailto:info@carolinatraininggrounds.com">info@carolinatraininggrounds.com</a></li>
+              <li><strong>Phone:</strong> <a href="tel:1-919-391-3013">(919) 391-3013</a></li>
+              <li><strong>Location:</strong> Chapel Hill, North Carolina</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Future Integrations</h3>
+            <p class="small">
+              This section can be used later for links to scheduling tools, membership systems, or partner programs. For now, it simply reserves space for future growth.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
+  <!-- =========================================================
+       FOOTER
+       - Update legal text and year as needed
+       ========================================================= -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© <span id="year"></span> Carolina Training Grounds. All rights reserved.</p>
-      <p class="small">
-        Facility home of Krav Maga Chapel Hill. Future community projects may be listed here as they develop.
-      </p>
     </div>
 
+    <!-- Simple script to keep the year current -->
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
   </footer>
-
 </body>
 </html>
