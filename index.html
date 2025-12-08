@@ -1,89 +1,179 @@
-/* ===== Logo in header ===== */
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Carolina Training Grounds | Chapel Hill Training Facility</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Carolina Training Grounds is a flexible training facility in Chapel Hill for classes, workshops, fitness programs, and self defense training.">
+  <link rel="stylesheet" href="styles.css">
+</head>
 
-.ctg-logo {
-  height: 56px;
-  width: auto;
-}
+<body>
 
-.logo-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
-}
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container nav-bar">
 
-/* Adjust font sizes if needed to match your existing styles */
-.logo-main {
-  font-size: 1.25rem;
-  font-weight: 700;
-}
+      <div class="logo-wrap">
+        <img src="CTG Logo.png" alt="CTG logo" class="ctg-logo">
+        <span class="site-name">Carolina Training Grounds</span>
+      </div>
 
-.logo-sub {
-  font-size: 0.85rem;
-  opacity: 0.85;
-}
+      <nav class="main-nav">
+        <a href="#about">About</a>
+        <a href="#facility">Facility</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#host">Programs & Events</a>
+        <a href="payments.html">Payments</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-/* ===== Hero watermark effect using logo ===== */
-.hero {
-  position: relative;
-  overflow: hidden;
-}
+    </div>
+  </header>
 
-/* Soft watermark behind hero content */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url("images/ctg-logo.png") center/60% no-repeat;
-  opacity: 0.06; /* adjust between 0.03 and 0.12 for more or less visibility */
-  pointer-events: none;
-}
+  <!-- INTRO BAR -->
+  <section class="intro-bar">
+    <div class="container intro-text">
+      Chapel Hill’s flexible training facility for fitness, martial arts, workshops, and community programs.
+    </div>
+  </section>
 
-/* Ensure hero content sits above watermark */
-.hero > .container {
-  position: relative;
-  z-index: 1;
-}
+  <main>
 
-/* ===== Hero image (facility photo) ===== */
-.hero-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    <!-- ABOUT -->
+    <section id="about" class="section section-white">
+      <div class="container narrow">
+        <h2 class="section-title">About Carolina Training Grounds</h2>
+        <p class="section-desc">
+          Carolina Training Grounds provides a clean, open, and professional environment for instructors, programs, and organizations that need a reliable training space. 
+        </p>
+        <p class="section-desc">
+          Whether you're hosting a class, seminar, fitness session, or private training block, CTG gives you the room, equipment access, and support to run your program smoothly.
+        </p>
+      </div>
+    </section>
 
-.hero-photo {
-  max-width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-}
+    <!-- FACILITY -->
+    <section id="facility" class="section section-blue">
+      <div class="container">
+        <h2 class="section-title">Facility Features</h2>
 
-/* ===== Gallery layout ===== */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-}
+        <div class="card-grid three">
+          <div class="card">
+            <h3>Training Floor</h3>
+            <ul>
+              <li>Padded flooring</li>
+              <li>Open layout for movement</li>
+              <li>Ideal for striking and fitness programs</li>
+            </ul>
+          </div>
 
-.gallery-item {
-  background: #ffffff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
-}
+          <div class="card">
+            <h3>Equipment</h3>
+            <ul>
+              <li>Striking pads and bags</li>
+              <li>Portable training gear</li>
+              <li>Instructional whiteboard area</li>
+            </ul>
+          </div>
 
-.gallery-item img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
+          <div class="card">
+            <h3>Environment</h3>
+            <ul>
+              <li>Clean training space</li>
+              <li>Restroom access</li>
+              <li>Convenient parking</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-.gallery-item figcaption {
-  padding: 0.75rem 1rem;
-  font-size: 0.9rem;
-  color: #163960;
-}
+    <!-- GALLERY -->
+    <section id="gallery" class="section section-white">
+      <div class="container">
+        <h2 class="section-title">Gallery</h2>
+        <p class="section-desc">A look inside the space and programs hosted at CTG.</p>
+
+        <div class="gallery-grid">
+
+          <img src="facility-main.png" alt="Training floor">
+
+          <img src="fitness-1.jpg" alt="Dumbbells in front of bags">
+          <img src="fitness-2.jpg" alt="Overhead press">
+          <img src="fitness-3.jpg" alt="Heavy bag row">
+          <img src="fitness-4.jpg" alt="Group bag class">
+          <img src="fitness-5.jpg" alt="Instructor stretching">
+          <img src="fitness-6.jpg" alt="Side plank beside bag">
+
+        </div>
+      </div>
+    </section>
+
+    <!-- HOST SECTION -->
+    <section id="host" class="section section-blue">
+      <div class="container">
+        <h2 class="section-title">Host Your Program, Class, or Event</h2>
+        <p class="section-desc">
+          Use CTG for classes, workshops, seminars, private training, or skill development programs. 
+        </p>
+
+        <div class="card-grid two">
+          <div class="card">
+            <h3>Ways to Use CTG</h3>
+            <ul>
+              <li>Weekly or monthly classes</li>
+              <li>Fitness or conditioning programs</li>
+              <li>Seminars and special events</li>
+              <li>Private or small-group training</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Payments</h3>
+            <p>Use our secure Square link for program payments, space rental, or event registration.</p>
+            <a href="payments.html" class="btn-primary">Make a Payment</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section-white">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+
+        <div class="card-grid two">
+
+          <div class="card">
+            <h3>Facility Contact</h3>
+            <ul class="contact-list">
+              <li>Email: <a href="mailto:info@carolinatraininggrounds.com">info@carolinatraininggrounds.com</a></li>
+              <li>Phone: <a href="tel:19193913013">919-391-3013</a></li>
+              <li>Location: Chapel Hill, NC</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>More Information</h3>
+            <p>Additional schedules, programs, and partner offerings will be added as CTG grows.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      © <span id="year"></span> Carolina Training Grounds. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
