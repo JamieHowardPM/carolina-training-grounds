@@ -3,11 +3,15 @@
    ========================================================= */
 
 :root {
-  --blue: #7BAFD4;
-  --navy: #002D72;
+  --blue: #7BAFD4;     /* UNC blue - primary */
+  --navy: #002D72;     /* Accent */
   --white: #ffffff;
   --light-gray: #F7F9FC;
   --text-dark: #1a1a1a;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -16,6 +20,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--text-dark);
   background-color: var(--white);
+}
+
+/* Containers */
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 5%;
 }
 
 /* =========================================================
@@ -34,29 +46,31 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 5%;
-}
-
-.ctg-logo {
-  height: 60px;
-  margin-right: 12px;
+  padding: 15px 0;
 }
 
 .logo-wrap {
   display: flex;
   align-items: center;
-  font-size: 1.4rem;
+}
+
+.ctg-logo {
+  height: 58px;
+  margin-right: 10px;
+}
+
+.site-name {
+  font-size: 1.3rem;
   font-weight: bold;
   color: var(--navy);
 }
 
-/* NAVIGATION */
-
 .main-nav a {
-  margin-left: 25px;
+  margin-left: 20px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
   color: var(--navy);
+  font-size: 0.95rem;
 }
 
 .main-nav a:hover {
@@ -69,22 +83,22 @@ body {
 
 .intro-bar {
   background-color: var(--blue);
-  padding: 16px 0;
+  padding: 14px 0;
 }
 
 .intro-text {
   color: var(--white);
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   font-weight: 600;
 }
 
 /* =========================================================
-   SECTION STYLES
+   SECTIONS
    ========================================================= */
 
 .section {
-  padding: 70px 5%;
+  padding: 70px 0;
 }
 
 .section-white {
@@ -92,50 +106,98 @@ body {
 }
 
 .section-blue {
+  background-color: #E7F2FA; /* very light blue */
+}
+
+.section-light {
   background-color: var(--light-gray);
 }
 
 .section-title {
-  text-align: center;
   font-size: 2rem;
   margin-bottom: 15px;
+  text-align: center;
   color: var(--navy);
 }
 
 .section-desc {
-  text-align: center;
+  font-size: 1.05rem;
   max-width: 700px;
-  margin: 0 auto 35px auto;
-  font-size: 1.1rem;
+  margin: 0 auto 30px auto;
   color: #333;
+  text-align: center;
+}
+
+.align-left {
+  text-align: left;
+  margin-left: 0;
 }
 
 /* =========================================================
-   CARD LAYOUT
+   SPLIT LAYOUT (TEXT + IMAGE)
+   ========================================================= */
+
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 30px;
+  align-items: center;
+}
+
+.split.reverse {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+}
+
+.split-text {
+  max-width: 100%;
+}
+
+.split-image img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  max-height: 350px;
+}
+
+/* Bullet list for sections */
+
+.bullet-list {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.bullet-list li {
+  margin-bottom: 6px;
+}
+
+/* =========================================================
+   CARD GRID
    ========================================================= */
 
 .card-grid {
   display: grid;
-  gap: 25px;
-}
-
-.card-grid.three {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
 }
 
 .card-grid.two {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card-grid.three {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
 .card {
   background-color: var(--white);
-  padding: 25px;
+  padding: 22px;
   border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
 
 .card h3 {
   color: var(--navy);
+  margin-top: 0;
 }
 
 .card ul {
@@ -143,18 +205,36 @@ body {
 }
 
 /* =========================================================
-   GALLERY
+   INLINE PHOTO ROW (FACILITY SECTION)
+   ========================================================= */
+
+.inline-photo-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.inline-photo-row img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* =========================================================
+   GALLERY GRID
    ========================================================= */
 
 .gallery-grid {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 18px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .gallery-grid img {
   width: 100%;
-  height: 240px;
+  height: 210px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -163,33 +243,64 @@ body {
    BUTTONS
    ========================================================= */
 
-.btn-primary {
+.btn-primary,
+.btn-secondary {
   display: inline-block;
-  background-color: var(--navy);
-  color: var(--white);
-  padding: 14px 26px;
-  font-weight: bold;
+  padding: 12px 22px;
+  font-weight: 700;
   border-radius: 8px;
   text-decoration: none;
-  margin-top: 10px;
+  font-size: 0.98rem;
+}
+
+.btn-primary {
+  background-color: var(--navy);
+  color: var(--white);
 }
 
 .btn-primary:hover {
   background-color: var(--blue);
 }
+
 .btn-secondary {
-  display: inline-block;
   background-color: var(--blue);
   color: var(--white);
-  padding: 12px 22px;
-  font-weight: bold;
-  border-radius: 8px;
-  text-decoration: none;
-  margin-top: 12px;
+  margin-left: 10px;
 }
 
 .btn-secondary:hover {
   background-color: var(--navy);
+}
+
+.cta-button-group {
+  margin-top: 18px;
+}
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contact-list li {
+  margin-bottom: 6px;
+}
+
+.contact-list a {
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+}
+
+.small {
+  font-size: 0.9rem;
+  color: #555;
 }
 
 /* =========================================================
@@ -200,6 +311,35 @@ body {
   background-color: var(--navy);
   color: var(--white);
   text-align: center;
-  padding: 30px 0;
+  padding: 26px 0;
   font-size: 0.9rem;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 800px) {
+  .split,
+  .split.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .main-nav {
+    display: none; /* simple mobile fallback; can replace with a burger later */
+  }
+
+  .section {
+    padding: 50px 0;
+  }
+
+  .cta-button-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .btn-secondary {
+    margin-left: 0;
+    margin-top: 10px;
+  }
 }
