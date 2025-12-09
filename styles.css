@@ -458,9 +458,8 @@ body {
 
 /* ---------- Footer ---------- */
 .site-footer {
-  background: rgba(19, 41, 75, 0.96); /* navy but thin strip only */
-  color: #fff;
-  backdrop-filter: blur(16px);
+  background: var(--ctg-unc-blue);
+  color: var(--ctg-navy);
   padding: 1.5rem 0 1.9rem;
 }
 
