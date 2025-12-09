@@ -458,8 +458,9 @@ body {
 
 /* ---------- Footer ---------- */
 .site-footer {
-  background: var(--ctg-unc-blue);
-  color: var(--ctg-navy);
+  background: rgba(19, 41, 75, 0.96); /* navy but thin strip only */
+  color: #fff;
+  backdrop-filter: blur(16px);
   padding: 1.5rem 0 1.9rem;
 }
 
@@ -506,7 +507,7 @@ body {
 .btn-outline {
   background: transparent;
   border-color: rgba(255, 255, 255, 0.65);
-  color: #ffffff;
+  color: var(--ctg-navy);
 }
 
 .section-highlight .btn-outline {
