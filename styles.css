@@ -4,7 +4,7 @@
 
 :root {
   --ctg-blue: #7BAFD4;    /* UNC light blue */
-  --ctg-navy: #13294B;    /* UNC dark navy */
+  --ctg-navy: #1A334A;    /* UNC dark navy */
   --ctg-bg:   #f5f7fb;
   --ctg-text: #111827;
   --ctg-muted:#6b7280;
@@ -141,7 +141,12 @@ a {
 
 .hero {
   position: relative;
-  background: radial-gradient(circle at top left, var(--ctg-blue) 0%, var(--ctg-navy) 55%, #050816 100%);
+  background: linear-gradient(
+     135deg,
+     var(--ctg-blue) 0%,
+     #4B9CD3 45%,
+     #1A334A 100%
+   );
   color: var(--ctg-white);
   padding: 4.5rem 0 3.5rem;
   overflow: hidden;
@@ -317,7 +322,11 @@ a {
 }
 
 .section-dark {
-  background-color: var(--ctg-navy);
+  background: linear-gradient(
+    135deg,
+    #4B9CD3 0%,
+    #1A334A 100%
+  );
   color: var(--ctg-white);
 }
 
@@ -336,7 +345,7 @@ a {
    ========================================================= */
 
 .strip {
-  background-color: var(--ctg-navy);
+  background-color: #4B9CD3;
   color: var(--ctg-white);
 }
 
@@ -686,9 +695,8 @@ a {
    ========================================================= */
 
 .site-footer {
-  background-color: var(--ctg-blue);
-  color: #02101f;
-  padding: 1.5rem 0 2rem;
+  background-color: #4B9CD3;
+  color: #02101F;
 }
 
 .footer-inner {
