@@ -51,9 +51,9 @@ body {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(19, 41, 75, 0.96); /* navy but thin strip only */
-  color: #fff;
-  backdrop-filter: blur(16px);
+  background: #ffffff;              /* light like the Use The Space section */
+  color: var(--ctg-navy);
+  border-bottom: 1px solid var(--ctg-border-soft);
 }
 
 .header-inner {
@@ -67,7 +67,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  color: #fff;
+  color: var(--ctg-navy);
   text-decoration: none;
 }
 
@@ -103,7 +103,7 @@ body {
 }
 
 .main-nav a {
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--ctg-navy);
   text-decoration: none;
   position: relative;
   padding-bottom: 0.15rem;
@@ -458,9 +458,10 @@ body {
 
 /* ---------- Footer ---------- */
 .site-footer {
-  background: var(--ctg-unc-blue);
+  background: #ffffff;              /* same light background */
   color: var(--ctg-navy);
   padding: 1.5rem 0 1.9rem;
+  border-top: 1px solid var(--ctg-border-soft);
 }
 
 .footer-inner {
@@ -470,7 +471,7 @@ body {
 
 .footer-sub {
   margin-top: 0.5rem;
-  opacity: 0.85;
+  opacity: 0.7;
 }
 
 /* ---------- Buttons ---------- */
@@ -503,20 +504,18 @@ body {
   box-shadow: 0 16px 40px rgba(123, 175, 212, 0.75);
 }
 
+/* OUTLINE BUTTONS: white fill, navy outline and text */
 .btn-outline {
-  background: transparent;
-  border-color: rgba(255, 255, 255, 0.65);
-  color: var(--ctg-navy);
-}
-
-.section-highlight .btn-outline {
+  background: #ffffff;
   border-color: var(--ctg-navy);
   color: var(--ctg-navy);
 }
 
 .btn-outline:hover {
-  background: rgba(255, 255, 255, 0.12);
+  background: var(--ctg-unc-blue-soft);
 }
+
+/* no special override needed for section-highlight anymore */
 
 /* ---------- Responsive tweaks ---------- */
 @media (max-width: 960px) {
