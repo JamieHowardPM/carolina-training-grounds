@@ -8,7 +8,7 @@
   --ctg-unc-blue: #7BAFD4;          /* Primary UNC blue */
   --ctg-unc-blue-soft: #dfefff;     /* Very light UNC tint */
   --ctg-unc-blue-mid: #a9cfee;      /* Soft mid blue */
-  --ctg-navy: #13294B;              /* Accent navy (limited) */
+  --ctg-navy: #13294B;              /* Accent navy */
   --ctg-bg-page: #f5f9ff;           /* Page background */
   --ctg-bg-light: #ffffff;
   --ctg-text-main: #061529;
@@ -46,14 +46,18 @@ body {
   padding: 0 1.5rem;
 }
 
-/* ---------- Header ---------- */
+/* =========================================
+   HEADER
+   ========================================= */
+
 .site-header {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: #ffffff;              /* light like the Use The Space section */
+  background: #ffffff;              /* white so the UNC logo pops */
   color: var(--ctg-navy);
   border-bottom: 1px solid var(--ctg-border-soft);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
 }
 
 .header-inner {
@@ -126,11 +130,19 @@ body {
   width: 100%;
 }
 
-/* ---------- Hero ---------- */
+/* =========================================
+   HERO
+   ========================================= */
+
 .hero {
   padding: 4.5rem 0 3.5rem;
-  /* UNC-forward gradient, much lighter overall */
-  background: radial-gradient(circle at 0% 0%, #ffffff 0%, var(--ctg-unc-blue-soft) 48%, var(--ctg-unc-blue-mid) 100%);
+  /* UNC-forward gradient */
+  background: radial-gradient(
+      circle at 0% 0%,
+      #ffffff 0%,
+      var(--ctg-unc-blue-soft) 48%,
+      var(--ctg-unc-blue-mid) 100%
+    );
 }
 
 .hero-inner {
@@ -196,7 +208,10 @@ body {
   border-radius: 18px;
 }
 
-/* ---------- Generic section styles ---------- */
+/* =========================================
+   GENERIC SECTION STYLES
+   ========================================= */
+
 .section {
   padding: 3.5rem 0;
 }
@@ -205,14 +220,19 @@ body {
   background: #ffffff;
 }
 
+/* Dark feature band: UNC + navy gradient with glow */
 .section-dark {
-  background: linear-gradient(135deg, var(--ctg-navy), #1c3a63);
+  background:
+    radial-gradient(circle at 0% 0%, rgba(123, 175, 212, 0.25) 0%, transparent 40%),
+    linear-gradient(135deg, var(--ctg-unc-blue), var(--ctg-navy));
   color: #ffffff;
 }
 
+/* Payments / waiver band: strong UNC blue */
 .section-highlight {
-  /* This is the waiver/payments band – keep it very UNC */
-  background: linear-gradient(135deg, var(--ctg-unc-blue-soft), var(--ctg-unc-blue));
+  background:
+    radial-gradient(circle at 100% 0%, rgba(255, 255, 255, 0.35) 0%, transparent 45%),
+    linear-gradient(135deg, var(--ctg-unc-blue-soft), var(--ctg-unc-blue));
 }
 
 .section-title {
@@ -222,7 +242,10 @@ body {
   color: var(--ctg-navy);
 }
 
-/* ---------- Pillar strip (Train / Teach / Host) ---------- */
+/* =========================================
+   TRAIN / TEACH / HOST STRIP
+   ========================================= */
+
 .strip {
   background: #f7fbff;
 }
@@ -248,7 +271,10 @@ body {
   color: var(--ctg-navy);
 }
 
-/* ---------- Feature split ---------- */
+/* =========================================
+   FEATURE SPLIT
+   ========================================= */
+
 .section-feature {
   background: var(--ctg-bg-page);
 }
@@ -298,7 +324,10 @@ body {
   color: var(--ctg-navy);
 }
 
-/* ---------- Use-the-space cards ---------- */
+/* =========================================
+   USE-THE-SPACE CARDS
+   ========================================= */
+
 .use-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -330,7 +359,10 @@ body {
   color: var(--ctg-navy);
 }
 
-/* ---------- Host section (dark band) ---------- */
+/* =========================================
+   HOST SECTION (dark band)
+   ========================================= */
+
 .host-inner {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
@@ -379,7 +411,10 @@ body {
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
 }
 
-/* ---------- Payments & waiver ---------- */
+/* =========================================
+   PAYMENTS & WAIVER SECTION
+   ========================================= */
+
 .payments-inner {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.1fr);
@@ -412,9 +447,12 @@ body {
   background: #ffffff;
 }
 
-/* ---------- Gallery strip ---------- */
+/* =========================================
+   GALLERY STRIP
+   ========================================= */
+
 .section-gallery {
-  background: #ffffff;
+  background: var(--ctg-unc-blue-soft);   /* light UNC band */
 }
 
 .gallery-inner {
@@ -431,7 +469,10 @@ body {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
 }
 
-/* ---------- Contact ---------- */
+/* =========================================
+   CONTACT
+   ========================================= */
+
 .contact-inner {
   max-width: 720px;
 }
@@ -456,9 +497,12 @@ body {
   color: var(--ctg-navy);
 }
 
-/* ---------- Footer ---------- */
+/* =========================================
+   FOOTER
+   ========================================= */
+
 .site-footer {
-  background: #ffffff;              /* same light background */
+  background: #ffffff;              /* white to match header */
   color: var(--ctg-navy);
   padding: 1.5rem 0 1.9rem;
   border-top: 1px solid var(--ctg-border-soft);
@@ -474,7 +518,10 @@ body {
   opacity: 0.7;
 }
 
-/* ---------- Buttons ---------- */
+/* =========================================
+   BUTTONS
+   ========================================= */
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -492,6 +539,7 @@ body {
     color 0.12s ease, border-color 0.12s ease;
 }
 
+/* Filled UNC button */
 .btn-primary {
   background: var(--ctg-unc-blue);
   border-color: rgba(255, 255, 255, 0.7);
@@ -504,7 +552,7 @@ body {
   box-shadow: 0 16px 40px rgba(123, 175, 212, 0.75);
 }
 
-/* OUTLINE BUTTONS: white fill, navy outline and text */
+/* Outline button: white fill, navy outline and text */
 .btn-outline {
   background: #ffffff;
   border-color: var(--ctg-navy);
@@ -515,9 +563,10 @@ body {
   background: var(--ctg-unc-blue-soft);
 }
 
-/* no special override needed for section-highlight anymore */
+/* =========================================
+   RESPONSIVE TWEAKS
+   ========================================= */
 
-/* ---------- Responsive tweaks ---------- */
 @media (max-width: 960px) {
   .hero-inner,
   .feature-card,
