@@ -1,6 +1,6 @@
 /* =========================================
    Carolina Training Grounds Styles
-   UNC-leaning palette, PF / OTF-style layout
+   UNC-leaning, PF / OTF-style layout
    ========================================= */
 
 /* ---------- Color tokens ---------- */
@@ -9,12 +9,12 @@
   --ctg-unc-blue-soft: #dfefff;     /* Very light UNC tint */
   --ctg-unc-blue-mid: #a9cfee;      /* Soft mid blue */
   --ctg-navy: #13294B;              /* Accent navy */
-  --ctg-bg-page: #f5f9ff;           /* Page background */
+  --ctg-bg-page: #e8f3ff;           /* Overall page wash */
   --ctg-bg-light: #ffffff;
   --ctg-text-main: #061529;
   --ctg-text-muted: #5b6a83;
-  --ctg-border-soft: rgba(19, 41, 75, 0.08);
-  --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.16);
+  --ctg-border-soft: rgba(19, 41, 75, 0.12);
+  --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.18);
 }
 
 /* ---------- Global reset ---------- */
@@ -49,15 +49,13 @@ body {
 /* =========================================
    HEADER
    ========================================= */
-
 .site-header {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: #ffffff;              /* white so the UNC logo pops */
+  background: #ffffff;            /* white so logo pops */
   color: var(--ctg-navy);
   border-bottom: 1px solid var(--ctg-border-soft);
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
 }
 
 .header-inner {
@@ -131,18 +129,13 @@ body {
 }
 
 /* =========================================
-   HERO
+   HERO BAND
    ========================================= */
-
 .hero {
   padding: 4.5rem 0 3.5rem;
-  /* UNC-forward gradient */
-  background: radial-gradient(
-      circle at 0% 0%,
-      #ffffff 0%,
-      var(--ctg-unc-blue-soft) 48%,
-      var(--ctg-unc-blue-mid) 100%
-    );
+  background:
+    radial-gradient(circle at 0% 0%, #ffffff 0%, rgba(255,255,255,0.5) 33%, transparent 55%),
+    linear-gradient(135deg, var(--ctg-unc-blue-soft), var(--ctg-unc-blue-mid));
 }
 
 .hero-inner {
@@ -209,30 +202,10 @@ body {
 }
 
 /* =========================================
-   GENERIC SECTION STYLES
+   GENERIC SECTIONS
    ========================================= */
-
 .section {
   padding: 3.5rem 0;
-}
-
-.section-light {
-  background: #ffffff;
-}
-
-/* Dark feature band: UNC + navy gradient with glow */
-.section-dark {
-  background:
-    radial-gradient(circle at 0% 0%, rgba(123, 175, 212, 0.25) 0%, transparent 40%),
-    linear-gradient(135deg, var(--ctg-unc-blue), var(--ctg-navy));
-  color: #ffffff;
-}
-
-/* Payments / waiver band: strong UNC blue */
-.section-highlight {
-  background:
-    radial-gradient(circle at 100% 0%, rgba(255, 255, 255, 0.35) 0%, transparent 45%),
-    linear-gradient(135deg, var(--ctg-unc-blue-soft), var(--ctg-unc-blue));
 }
 
 .section-title {
@@ -245,9 +218,8 @@ body {
 /* =========================================
    TRAIN / TEACH / HOST STRIP
    ========================================= */
-
 .strip {
-  background: #f7fbff;
+  background: linear-gradient(135deg, var(--ctg-unc-blue), var(--ctg-unc-blue-mid));
 }
 
 .strip-inner {
@@ -260,8 +232,8 @@ body {
   background: #ffffff;
   border-radius: 18px;
   padding: 1.6rem 1.4rem;
-  border: 1px solid var(--ctg-border-soft);
-  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255,255,255,0.4);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
 }
 
 .pillar-card h2 {
@@ -272,11 +244,12 @@ body {
 }
 
 /* =========================================
-   FEATURE SPLIT
+   FACILITY FEATURE BAND
    ========================================= */
-
 .section-feature {
-  background: var(--ctg-bg-page);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(255, 255, 255, 0.35) 0%, transparent 45%),
+    linear-gradient(135deg, var(--ctg-unc-blue-soft), var(--ctg-unc-blue));
 }
 
 .feature-card {
@@ -325,8 +298,11 @@ body {
 }
 
 /* =========================================
-   USE-THE-SPACE CARDS
+   USE THE SPACE – CARDS ON TINTED BAND
    ========================================= */
+.section-light {
+  background: #f2f7ff; /* UNC-tinted band */
+}
 
 .use-grid {
   display: grid;
@@ -338,7 +314,7 @@ body {
   background: #ffffff;
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.14);
   border: 1px solid var(--ctg-border-soft);
 }
 
@@ -360,8 +336,12 @@ body {
 }
 
 /* =========================================
-   HOST SECTION (dark band)
+   HOST SECTION – DARKER GRADIENT BAND
    ========================================= */
+.section-dark {
+  background: linear-gradient(135deg, var(--ctg-navy), #1c3a63);
+  color: #ffffff;
+}
 
 .host-inner {
   display: grid;
@@ -412,8 +392,13 @@ body {
 }
 
 /* =========================================
-   PAYMENTS & WAIVER SECTION
+   PAYMENTS & WAIVER – UNC GRADIENT BAND
    ========================================= */
+.section-highlight {
+  background:
+    radial-gradient(circle at 0% 0%, rgba(255,255,255,0.4) 0%, transparent 50%),
+    linear-gradient(135deg, var(--ctg-unc-blue-soft), var(--ctg-unc-blue));
+}
 
 .payments-inner {
   display: grid;
@@ -448,11 +433,10 @@ body {
 }
 
 /* =========================================
-   GALLERY STRIP
+   GALLERY STRIP – IMAGE ROW ON LIGHT BAND
    ========================================= */
-
 .section-gallery {
-  background: var(--ctg-unc-blue-soft);   /* light UNC band */
+  background: #eef4ff;
 }
 
 .gallery-inner {
@@ -470,9 +454,8 @@ body {
 }
 
 /* =========================================
-   CONTACT
+   CONTACT – LIGHT BAND
    ========================================= */
-
 .contact-inner {
   max-width: 720px;
 }
@@ -498,11 +481,10 @@ body {
 }
 
 /* =========================================
-   FOOTER
+   FOOTER – WHITE WITH NAVY TEXT
    ========================================= */
-
 .site-footer {
-  background: #ffffff;              /* white to match header */
+  background: #ffffff;
   color: var(--ctg-navy);
   padding: 1.5rem 0 1.9rem;
   border-top: 1px solid var(--ctg-border-soft);
@@ -521,7 +503,6 @@ body {
 /* =========================================
    BUTTONS
    ========================================= */
-
 .btn {
   display: inline-flex;
   align-items: center;
@@ -539,20 +520,20 @@ body {
     color 0.12s ease, border-color 0.12s ease;
 }
 
-/* Filled UNC button */
+/* Filled UNC-blue button */
 .btn-primary {
   background: var(--ctg-unc-blue);
-  border-color: rgba(255, 255, 255, 0.7);
+  border-color: rgba(255, 255, 255, 0.9);
   color: var(--ctg-navy);
-  box-shadow: 0 12px 32px rgba(123, 175, 212, 0.55);
+  box-shadow: 0 12px 32px rgba(123, 175, 212, 0.65);
 }
 
 .btn-primary:hover {
   transform: translateY(-1px);
-  box-shadow: 0 16px 40px rgba(123, 175, 212, 0.75);
+  box-shadow: 0 16px 40px rgba(123, 175, 212, 0.85);
 }
 
-/* Outline button: white fill, navy outline and text */
+/* Outline button – white fill, navy border and text */
 .btn-outline {
   background: #ffffff;
   border-color: var(--ctg-navy);
@@ -564,9 +545,8 @@ body {
 }
 
 /* =========================================
-   RESPONSIVE TWEAKS
+   RESPONSIVE
    ========================================= */
-
 @media (max-width: 960px) {
   .hero-inner,
   .feature-card,
