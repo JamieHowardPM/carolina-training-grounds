@@ -544,62 +544,6 @@ body {
   background: var(--ctg-unc-blue-soft);
 }
 
-/* ---------- Payments page card layout ---------- */
-.payment-section {
-  padding: 3rem 0;
-}
-
-.payment-card {
-  background: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-  max-width: 760px;
-  margin: 2rem auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.payment-card-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.payment-card-body {
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.payment-description {
-  margin: 0.6rem 0 0.4rem;
-}
-
-.payment-button-group {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin: 1.25rem 0;
-}
-
-.payment-note {
-  font-size: 0.85rem;
-  color: var(--ctg-text-muted);
-}
-
-/* Responsive layout for payment cards */
-@media (max-width: 768px) {
-  .payment-card {
-    grid-template-columns: 1fr;
-  }
-
-  .payment-card-image {
-    height: 220px;
-  }
-}
-
 /* =========================================
    RESPONSIVE
    ========================================= */
@@ -651,4 +595,23 @@ body {
   .hero-image-frame {
     max-width: 100%;
   }
+}
+/* ----- Payments page image layout tweaks ----- */
+
+/* Wrapper around the Train / Teach / Host image */
+.payments-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Make sure the image itself is not cropped */
+.payments-visual img {
+  display: block;
+  width: 100%;
+  height: auto;              /* let height scale naturally */
+  max-width: 520px;          /* keeps it from getting too huge on wide screens */
+  border-radius: 24px;
+  box-shadow: var(--shadow-soft);
+  object-fit: contain;       /* avoid cropping; show full image */
 }
