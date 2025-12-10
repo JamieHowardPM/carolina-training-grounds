@@ -1,82 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Payments | Carolina Training Grounds</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Secure payment page for Carolina Training Grounds training space rentals, seminars, and programs.">
-  <link rel="stylesheet" href="styles.css">
-</head>
+<!-- ============================
+     TRAIN: Student Session Purchases
+     ============================ -->
+<section id="train" class="payment-section">
+  <div class="payment-card">
+    <img src="Train.png" alt="Train at Carolina Training Grounds" class="payment-card-image">
 
-<body>
+    <div class="payment-card-body">
+      <h2>Train at Carolina Training Grounds</h2>
+      <p class="payment-description">
+        Purchase single sessions or class packs for student training at CTG.
+      </p>
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="container nav-bar">
-      <div class="logo-wrap">
-        <img src="CTG Logo.png" alt="CTG logo" class="ctg-logo">
-        <span class="site-name">Carolina Training Grounds</span>
+      <div class="payment-button-group">
+
+        <!-- Single Session -->
+        <a 
+          href="https://buy.stripe.com/9B68wIc3k6nK3Wm1yG24000" 
+          class="btn btn-primary payment-btn"
+          target="_blank" 
+          rel="noopener noreferrer">
+          Single Session – $25
+        </a>
+
+        <!-- 5-Class Pack -->
+        <a 
+          href="https://buy.stripe.com/4gM7sE2sK8vSfF4fpw24001" 
+          class="btn btn-primary payment-btn"
+          target="_blank" 
+          rel="noopener noreferrer">
+          5-Class Pack (5 sessions) – $110
+        </a>
+
+        <!-- 10-Class Pack -->
+        <a 
+          href="https://buy.stripe.com/cNi28k9Vc6nK2Sib9g24002"
+          class="btn btn-primary payment-btn"
+          target="_blank" 
+          rel="noopener noreferrer">
+          10-Class Pack (10 sessions) – $200
+        </a>
+
       </div>
-      <nav class="main-nav">
-        <a href="index.html#about">About</a>
-        <a href="index.html#facility">Facility</a>
-        <a href="index.html#gallery">Gallery</a>
-        <a href="index.html#host">Programs & Events</a>
-        <a href="payments.html">Payments</a>
-        <a href="index.html#contact">Contact</a>
-      </nav>
+
+      <p class="payment-note">
+        Each pack equals the number of sessions listed. After purchase you will receive a confirmation email. 
+        Please complete the liability waiver before training:
+        <a href="https://www.carolinatraininggrounds.com/waiver" target="_blank" rel="noopener noreferrer">
+          carolinatraininggrounds.com/waiver
+        </a>
+      </p>
     </div>
-  </header>
-
-  <!-- INTRO BAR -->
-  <section class="intro-bar">
-    <div class="container intro-text">
-      Secure Payment Portal for Carolina Training Grounds
-    </div>
-  </section>
-
-  <main>
-
-    <!-- PAYMENT SECTION -->
-    <section class="section section-white">
-      <div class="container narrow">
-        <h2 class="section-title">Make a Payment</h2>
-        <p class="section-desc">
-          Use this page to make payments for space rentals, seminars, programs, or other agreed services at Carolina Training Grounds.
-        </p>
-
-        <div class="card-grid one">
-         <div class="card">
-            <h3>Make a Payment</h3>
-            <p>You can submit payments for space rentals, seminars, or agreed services through the secure Square link below.</p>
-          
-            <a 
-              href="https://square.link/u/aU0fCBtu?src=embed" 
-              target="_blank" 
-              class="btn-primary"
-            >
-              Make a Payment
-            </a>
-          
-            <p class="small" style="margin-top: 10px;">
-              You will receive a receipt immediately after completing payment.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      © <span id="year"></span> Carolina Training Grounds. All rights reserved.
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-
-</body>
-</html>
+  </div>
+</section>
