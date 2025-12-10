@@ -2,90 +2,122 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Liability Waiver | Carolina Training Grounds</title>
+  <title>Carolina Training Grounds | Liability Waiver</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Complete the Carolina Training Grounds liability waiver before training or using the facility.">
+  <meta name="description" content="Complete the Carolina Training Grounds liability waiver before training, teaching, or hosting at the facility.">
+
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+
+  <!-- Site Styles -->
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-  <!-- HEADER -->
+  <!-- ======================================================
+       HEADER
+       (same structure as payments.html)
+       ====================================================== -->
   <header class="site-header">
-    <div class="container nav-bar">
-      <div class="logo-wrap">
-        <img src="CTG Logo.png" alt="CTG logo" class="ctg-logo">
-        <span class="site-name">Carolina Training Grounds</span>
-      </div>
+    <div class="container header-inner">
+      <a href="index.html#top" class="brand">
+        <img src="CTG%20Logo.png" alt="Carolina Training Grounds logo" class="brand-logo">
+        <span class="brand-text">
+          <span class="brand-name">Carolina Training Grounds</span>
+          <span class="brand-tagline">Train. Teach. Host.</span>
+        </span>
+      </a>
 
       <nav class="main-nav">
         <a href="index.html#about">About</a>
         <a href="index.html#facility">Facility</a>
-        <a href="index.html#gallery">Gallery</a>
-        <a href="index.html#host">Programs & Events</a>
+        <a href="index.html#programs">Use The Space</a>
+        <a href="index.html#host">How To Host</a>
         <a href="payments.html">Payments</a>
-        <a href="waiver.html">Waiver</a>
+        <a href="#top">Waiver</a>
         <a href="index.html#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- INTRO BAR -->
-  <section class="intro-bar">
-    <div class="container intro-text">
-      Complete the Carolina Training Grounds Liability Waiver
-    </div>
-  </section>
-
   <main>
-    <section class="section section-white">
-      <div class="container narrow">
-        <h2 class="section-title">Liability Waiver</h2>
-        <p class="section-desc">
-          All participants, parents/guardians of minors, and facility users must complete this waiver before training, attending a class, or using the space.
-        </p>
 
-        <div class="card">
-          <h3>Waiver Form</h3>
+    <!-- ======================================================
+         WAIVER SECTION
+         Reuses the payments layout styles
+         ====================================================== -->
+    <section class="section section-highlight">
+      <div class="container payments-inner">
+        <!-- Left column: explanation -->
+        <div class="payments-text">
+          <h1 style="margin-top:0;">CTG Liability Waiver</h1>
           <p>
-            Please complete the form below. When you finish, you will see a confirmation message. Staff may ask to confirm completion at check-in.
+            Every participant must complete a liability waiver before training at
+            Carolina Training Grounds. This applies to:
+          </p>
+          <ul>
+            <li>Students attending CTG classes or events</li>
+            <li>Participants in programs taught by independent instructors</li>
+            <li>Guests attending hosted seminars or special events</li>
+          </ul>
+
+          <p>
+            The form covers assumption of risk, medical readiness, and consent for
+            emergency care. Parents or legal guardians must complete the minor
+            section for anyone under 18.
           </p>
 
-          <!-- Replace ONLY the src value below with your Google Forms embed URL -->
+          <p class="payment-note">
+            You only need to complete the waiver once per person unless your
+            information changes. If you have questions about the waiver or how
+            your information is used, email
+            <a href="mailto:info@carolinatraininggrounds.com">info@carolinatraininggrounds.com</a>.
+          </p>
+
+          <a
+            href="https://forms.gle/Fm3y4TNJpnS8Ny4K7"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline"
+          >
+            Open Waiver in New Tab
+          </a>
+        </div>
+
+        <!-- Right column: embedded Google Form -->
+        <div class="payments-form-wrap">
           <iframe
             src="https://docs.google.com/forms/d/e/1FAIpQLSch1oYuUHn6W2m3Fs4wM3kYlH7tKdDPo7u80h2weWLSUd8Opw/viewform?embedded=true"
             width="100%"
-            height="1200"
+            height="700"
             frameborder="0"
             marginheight="0"
             marginwidth="0"
-            loading="lazy"
+            title="Carolina Training Grounds liability waiver"
           >
             Loading…
           </iframe>
-            <p style="margin-top: 20px; text-align: center;">
-              If the form does not load, you can open it directly:
-              <a 
-                href="https://docs.google.com/forms/d/e/1FAIpQLSch1oYuUHn6W2m3Fs4wM3kYlH7tKdDPo7u80h2weWLSUd8Opw/viewform" 
-                target="_blank"
-              >
-                Open Waiver Form
-              </a>
-            </p>
         </div>
       </div>
     </section>
+
   </main>
 
+  <!-- ======================================================
+       FOOTER
+       ====================================================== -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      © <span id="year"></span> Carolina Training Grounds. All rights reserved.
+      <p>© <span id="year"></span> Carolina Training Grounds. All rights reserved.</p>
+      <p class="footer-sub">
+        Facility operated by Carolina Training Grounds, LLC. All participants must complete a
+        liability waiver prior to training.
+      </p>
     </div>
   </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-
 </body>
 </html>
