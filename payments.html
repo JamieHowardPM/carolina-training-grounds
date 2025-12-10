@@ -2,201 +2,159 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Carolina Training Grounds | Payments</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Purchase training sessions and learn about event and instructor facility use at Carolina Training Grounds in Chapel Hill.">
-
-  <!-- Google Font -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-
-  <!-- Site Styles -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payments | Carolina Training Grounds</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-  <!-- ======================================================
-       HEADER
-       ====================================================== -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html#top" class="brand">
-        <img src="CTG%20Logo.png" alt="Carolina Training Grounds logo" class="brand-logo">
+      <a class="brand" href="/">
+        <img src="CTG Logo.png" class="brand-logo" alt="CTG Logo">
         <span class="brand-text">
           <span class="brand-name">Carolina Training Grounds</span>
           <span class="brand-tagline">Train. Teach. Host.</span>
         </span>
       </a>
-
       <nav class="main-nav">
-        <a href="index.html#about">About</a>
-        <a href="index.html#facility">Facility</a>
-        <a href="index.html#programs">Use The Space</a>
-        <a href="index.html#host">How To Host</a>
-        <a href="payments.html">Payments</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="/">Home</a>
+        <a href="/#facility">Facility</a>
+        <a href="/#programs">Use The Space</a>
+        <a href="/#host">How To Host</a>
+        <a href="/payments.html">Payments</a>
+        <a href="/#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <!-- ===============================
+       PAGE HEADER
+  ================================ -->
+  <section class="section section-highlight">
+    <div class="container">
+      <h1 class="section-title">Payments & Class Packs</h1>
+      <p style="text-align:center; max-width:600px; margin:0 auto;">
+        Choose a training option or facility rental below. All payments are processed securely through Stripe.
+      </p>
+    </div>
+  </section>
 
-    <!-- ======================================================
-         TRAIN – STUDENT SESSIONS
-         ====================================================== -->
-    <section id="train" class="section section-highlight payment-section">
-      <div class="container">
-        <h1 style="margin-top:0; text-align:center;">Train at Carolina Training Grounds</h1>
-
-        <div class="payment-card">
-          <img src="Train.png" alt="Train at Carolina Training Grounds" class="payment-card-image">
-
-          <div class="payment-card-body">
-            <h2>Student Training Sessions</h2>
-            <p class="payment-description">
-              Purchase single sessions or class packs for student training at CTG. Current rates are shown
-              on the secure checkout page.
-            </p>
-
-            <div class="payment-button-group">
-
-              <!-- Single Session -->
-              <a
-                href="https://buy.stripe.com/9B68wIc3k6nK3Wm1yG24000"
-                class="btn btn-primary payment-btn"
-                target="_blank"
-                rel="noopener noreferrer">
-                Single Session
-              </a>
-
-              <!-- 5-Class Pack -->
-              <a
-                href="https://buy.stripe.com/4gM7sE2sK8vSfF4fpw24001"
-                class="btn btn-primary payment-btn"
-                target="_blank"
-                rel="noopener noreferrer">
-                5-Class Pack (5 sessions)
-              </a>
-
-              <!-- 10-Class Pack -->
-              <a
-                href="https://buy.stripe.com/cNi28k9Vc6nK2Sib9g24002"
-                class="btn btn-primary payment-btn"
-                target="_blank"
-                rel="noopener noreferrer">
-                10-Class Pack (10 sessions)
-              </a>
-            </div>
-
-            <p class="payment-note">
-              Each pack equals the number of sessions listed. After purchase you will receive a confirmation email.
-              Please arrive a few minutes early, wear athletic clothing, and bring water and (optionally) a small
-              workout towel. For safety and cleanliness, outside shoes are not permitted on the mat.
-            </p>
-
-            <p class="payment-note">
-              All participants must also complete a liability waiver before training:
-              <a href="https://forms.gle/Fm3y4TNJpnS8Ny4K7" target="_blank" rel="noopener noreferrer">
-                CTG Liability Waiver
-              </a>
-            </p>
-          </div>
-        </div>
+  <!-- ===============================
+       TRAIN SECTION
+  ================================ -->
+  <section class="section section-light">
+    <div class="container payments-box">
+      
+      <div class="payments-image-wrap">
+        <img src="Train.png" alt="Train at CTG">
       </div>
-    </section>
 
-    <!-- ======================================================
-         HOST – EVENTS AND SEMINARS
-         ====================================================== -->
-    <section id="host-payments" class="section section-dark payment-section">
-      <div class="container">
-        <h2 class="section-title" style="color:#ffffff;">Host an Event, Seminar, or Special Session</h2>
+      <div class="payments-content">
+        <h2>Train at Carolina Training Grounds</h2>
+        <p>
+          Purchase single sessions or class packs for student training at Carolina Training Grounds.
+          After purchase you will receive a confirmation email. All participants must complete a liability waiver.
+        </p>
 
-        <div class="payment-card">
-          <img src="Host2.png" alt="Host an event at Carolina Training Grounds" class="payment-card-image">
-
-          <div class="payment-card-body">
-            <h2>CTG – Host (Event or Seminar Rental)</h2>
-            <p class="payment-description">
-              Use the facility for one time seminars, visiting schools, clinics, or special events.
-              Final pricing and payment links are shared after we confirm the details of your event.
-            </p>
-
-            <ul>
-              <li>Hourly event rental for focused training blocks</li>
-              <li>Half day and multi block options for larger events</li>
-              <li>Support for guest instructors, schools, and organizations</li>
-            </ul>
-
-            <p class="payment-note">
-              Tell us what you want to run and we will send a Stripe payment link that matches
-              the agreed schedule and structure.
-            </p>
-
-            <a
-              href="mailto:info@carolinatraininggrounds.com?subject=Host%20Event%20Inquiry&body=Tell%20us%20about%20your%20event%3A%0A%E2%80%A2%20Program%20type%3A%0A%E2%80%A2%20Preferred%20date(s)%20and%20time(s)%3A%0A%E2%80%A2%20Estimated%20number%20of%20participants%3A%0A%E2%80%A2%20Any%20equipment%20needs%3A"
-              class="btn btn-outline">
-              Contact Us About Hosting
-            </a>
-          </div>
+        <div class="payments-actions">
+          <a href="https://buy.stripe.com/9B68wIc3k6nK3Wm1yG24000" class="btn btn-primary">Single Session</a>
+          <a href="https://buy.stripe.com/4gM7sE2sK8vSfF4fpw24001" class="btn btn-outline">5-Class Pack</a>
+          <a href="https://buy.stripe.com/cNi28k9Vc6nK2Sib9g24002" class="btn btn-outline">10-Class Pack</a>
         </div>
+
+        <p class="payments-note">
+          Each pack equals the number of sessions listed. Please arrive a few minutes early, wear athletic clothing,
+          and bring water and optionally a small towel. Outside shoes are not permitted on the mat.
+        </p>
+
+        <p>
+          Complete your waiver before training:
+          <a href="/waiver">CTG Liability Waiver</a>
+        </p>
       </div>
-    </section>
 
-    <!-- ======================================================
-         TEACH – INSTRUCTOR HOURLY USE
-         ====================================================== -->
-    <section id="teach-payments" class="section section-light payment-section">
-      <div class="container">
-        <h2 class="section-title">Teach Your Program at CTG</h2>
+    </div>
+  </section>
 
-        <div class="payment-card">
-          <img src="Teach2.png" alt="Teach at Carolina Training Grounds" class="payment-card-image">
+  <!-- ===============================
+       HOST SECTION
+  ================================ -->
+  <section class="section section-feature">
+    <div class="container payments-box reverse">
 
-          <div class="payment-card-body">
-            <h2>CTG – Teach (Instructor Facility Use)</h2>
-            <p class="payment-description">
-              For independent instructors running their own classes, workshops, or recurring programs.
-              Instructor rates are arranged directly with CTG and paid through private Stripe links.
-            </p>
+      <div class="payments-image-wrap">
+        <img src="Host2.png" alt="Host at CTG">
+      </div>
 
-            <ul>
-              <li>Suitable for striking, self defense, conditioning, and small group formats</li>
-              <li>You manage your students, we provide the facility and environment</li>
-              <li>Simple structure with clear agreements before any payments are made</li>
-            </ul>
+      <div class="payments-content">
+        <h2>Host a Seminar, Event, or Training Block</h2>
+        <p>
+          Reserve the facility for your organization, visiting school, or specialty event.  
+          Hourly and block rates available through Stripe.
+        </p>
 
-            <p class="payment-note">
-              Once your program is approved, we will send you a private Stripe link for your reserved
-              hours or blocks so you can handle payments securely.
-            </p>
-
-            <a
-              href="mailto:info@carolinatraininggrounds.com?subject=Instructor%20Use%20Inquiry&body=Tell%20us%20about%20your%20program%3A%0A%E2%80%A2%20What%20you%20teach%3A%0A%E2%80%A2%20Preferred%20day(s)%20and%20time(s)%3A%0A%E2%80%A2%20Estimated%20class%20size%3A%0A%E2%80%A2%20How%20often%20you%27d%20like%20to%20run%20classes%3A"
-              class="btn btn-outline">
-              Contact Us About Teaching
-            </a>
-          </div>
+        <div class="payments-actions">
+          <a href="https://buy.stripe.com/test_host_hour_link" class="btn btn-primary">Host Hourly</a>
+          <a href="https://buy.stripe.com/test_host_halfday_link" class="btn btn-outline">Half-Day Block</a>
+          <a href="https://buy.stripe.com/test_host_fullday_link" class="btn btn-outline">Full-Day Block</a>
         </div>
+
+        <p class="payments-note">
+          Hosting rates are intended for seminars, multi-instructor events, visiting schools,
+          and community training programs.
+        </p>
       </div>
-    </section>
 
-  </main>
+    </div>
+  </section>
 
-  <!-- ======================================================
+  <!-- ===============================
+       TEACH SECTION (Contact Only)
+  ================================ -->
+  <section class="section section-light">
+    <div class="container payments-box">
+
+      <div class="payments-image-wrap">
+        <img src="Teach2.png" alt="Teach at CTG">
+      </div>
+
+      <div class="payments-content">
+        <h2>Teach at Carolina Training Grounds</h2>
+        <p>
+          Approved instructors may reserve space for their own classes.  
+          Hourly facility use rates are available upon request.
+        </p>
+
+        <div class="payments-actions">
+          <a href="mailto:info@carolinatraininggrounds.com" class="btn btn-primary">
+            Contact for Instructor Access
+          </a>
+        </div>
+
+        <p class="payments-note">
+          Instructor access is approved individually to ensure safety, program fit,  
+          and proper facility coordination.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===============================
        FOOTER
-       ====================================================== -->
+  ================================ -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© <span id="year"></span> Carolina Training Grounds. All rights reserved.</p>
-      <p class="footer-sub">
-        Facility operated by Carolina Training Grounds, LLC. All participants must complete a
-        liability waiver prior to training.
-      </p>
+      <p class="footer-sub">Facility operated by Carolina Training Grounds, LLC.</p>
     </div>
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
