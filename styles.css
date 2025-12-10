@@ -615,3 +615,40 @@ body {
   box-shadow: var(--shadow-soft);
   object-fit: contain;       /* avoid cropping; show full image */
 }
+/* Payments Page Box Layout */
+.payments-box {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2rem;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+  margin-bottom: 3rem;
+}
+
+.payments-box.reverse {
+  grid-template-columns: 1fr 1.2fr;
+}
+
+.payments-image-wrap img {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+  object-fit: cover;
+}
+
+/* Button area */
+.payments-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.payments-note {
+  font-size: 0.9rem;
+  color: var(--ctg-text-muted);
+  max-width: 480px;
+}
